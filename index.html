@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Scrolling Website</title>
+        <link rel="stylesheet" type="text/css" href="style.css"> 
+    </head>
+    <body>
+        <header>
+            <a href="#" class="logo">王鴻洲</a>
+            <ul>
+                <li><a href="#" class="active">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Work</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </header>
+        <section>
+            <img src="stars.png" id="stars">
+            <img src="moon.png" id="moon">
+            <img src="mountains_behind.png" id="mountains_behind">
+            <img src="mountains_front.png" id="mountains_front">
+            <h2 id="text">Web Design</h2>
+            <a href="#sec" id="btn">Explore</a>
+        </section>
+        <div id="sec">
+            <h2>Scrolling Effects</h2>
+            <p>Hello, my name is 王鴻洲, my English name is Raphael Austin
+                Adiputra Ong. My student ID is 111110539 and I am a first year in the Computer Science
+                Department in National Quemoy University as an overseas Chinese Student from Indonesia.
+                 <br><br> This website is created originally by a YouTuber named Online Tutorials. 
+                 I referenced his videos to make this website. Over the years, I also practiced a lot from his videos
+                and it has helped me improve in terms of designing a website using HTML,
+                CSS, and JavaScript.<br><br>I did this specific front end webpage design because
+                I have always been interested in the way that these animations work. Upon the years,
+                I grew fond of desining webpages and I specifically practiced this one a lot. I wanted
+                to take it upon myself and try use other images for this specific setting and design, but
+                during the editing of the pictures, my photo editing software PhotoShop has crashed
+                and failed to save my pictures. In result, I decided to use the same background pictures
+                as he used in his tutorial.<br><br>I understood the concept of this website and how
+                to recreate it again. I didn't use ChatGPT for this website at all. I just fully referenced
+                it from the YouTube Tutorial and I hope that's okay.<br><br>I would also like to say that I am
+                truly grateful for the opportunity of studying with you for I have learnt further about critical points
+                of designing a website, and more.</p>
+        </div>
+
+        <script>
+            let stars = document.getElementById('stars');
+            let moon = document.getElementById('moon');
+            let mountains_behind = document.getElementById('mountains_behind');
+            let mountains_front = document.getElementById('mountains_front');
+            let text = document.getElementById('text');
+            let btn = document.getElementById('btn');
+            let header = document.querySelector('header');
+
+            window.addEventListener('scroll', function(){
+                let value = window.scrollY;
+                stars.style.left = value + 0.25 + 'px'
+                moon.style.top = value + 1.05 + 'px'
+                mountains_behind.style.top = value + 0.5 + 'px'
+                mountains_front.style.top = value + 0 + 'px'
+                text.style.marginRight = value + 5 + 'px'
+                text.style.marginTop = value + 1.5 + 'px'
+                btn.style.marginTop = value + 1.5 + 'px'
+                hader.style.top = value + 0.5 + 'px'
+            })
+        </script>
+    </body>
+</html>
